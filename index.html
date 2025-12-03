@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rockwood Lab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Rockwood Lab is an independent engineering practice providing full-stack software development and prototype engineering led by Brent Rockwood." />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    :root {
+      --navy: #0E254A;
+      --orange: #FF8A00;
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #555555;
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 80px 0 0 0;
+    }
+
+    .logo {
+      max-width: 320px;
+    }
+
+    .logo img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 40px 0;
+    }
+
+    /* Hero / headline */
+
+    .hero {
+      margin-top: 32px;
+      text-align: left;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      max-width: 620px;
+      color: var(--muted);
+      margin: 0 0 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: 1px solid var(--navy);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #e57800;
+      border-color: #e57800;
+      color: #ffffff;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--navy);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(14, 37, 74, 0.06);
+    }
+
+    /* Section headings */
+
+    .section-title {
+      font-size: 1.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .section-divider {
+      width: 40px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--orange);
+      margin-bottom: 20px;
+    }
+
+    /* What section */
+
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px 32px;
+    }
+
+    .what-item h3 {
+      font-size: 1.05rem;
+      margin: 0 0 6px;
+      color: var(--navy);
+    }
+
+    .what-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    /* Who section */
+
+    .who-body p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .who-emphasis {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    /* Contact section */
+
+    .contact-body {
+      font-size: 1rem;
+    }
+
+    .contact-body p {
+      margin: 0 0 8px;
+    }
+
+    .contact-label {
+      font-weight: 600;
+      color: var(--navy);
+      margin-right: 4px;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888888;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      main {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .hero-title {
+        font-size: 2.1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <!-- Replace src with your actual logo path -->
+          <img src="rockwood-lab-logo.png" alt="Rockwood Lab logo" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero / Headline -->
+      <section class="section container hero" id="top">
+        <h1 class="hero-title">Practical engineering for software and prototypes.</h1>
+        <p class="hero-subtitle">
+          Rockwood Lab is an independent engineering practice led by Brent Rockwood,
+          delivering full-stack software, embedded systems, and functional prototypes
+          for teams that need experienced, hands-on help.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Contact</a>
+          <a href="#what" class="btn btn-ghost">What I Do</a>
+        </div>
+      </section>
+
+      <!-- What -->
+      <section class="section container container" id="what">
+        <div class="section-title">What</div>
+        <div class="section-divider"></div>
+
+        <div class="what-grid">
+          <div class="what-item">
+            <h3>Full-stack Software Development</h3>
+            <p>
+              Design and implementation of web applications and internal tools using
+              Node.js, TypeScript, React, GraphQL, and SQL databases.
+            </p>
+          </div>
+
+          <div class="what-item">
+            <h3>Data &amp; Visualization Systems</h3>
+            <p>
+              Building dashboards, metrics platforms, and workflow tools to make
+              complex operational or cybersecurity data understandable and actionable.
+            </p>
+          </div>
+
+          <div class="what-item">
+            <h3>Embedded &amp; Prototype Engineering</h3>
+            <p>
+              Early-stage hardware and IoT concepts using ESP32, Raspberry&nbsp;Pi,
+              and rapid 3D-printed or machined enclosures for proof-of-concept builds.
+            </p>
+          </div>
+
+          <div class="what-item">
+            <h3>Architecture &amp; Advisory</h3>
+            <p>
+              Pragmatic guidance on system design, modernization, and developer
+              tooling with a focus on maintainability and security.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Who -->
+      <section class="section container" id="who">
+        <div class="section-title">Who</div>
+        <div class="section-divider"></div>
+
+        <div class="who-body">
+          <p>
+            <span class="who-emphasis">Rockwood Lab is led by Brent Rockwood,</span>
+            a veteran software engineer and technology leader with more than
+            two decades of experience building production systems for large
+            enterprises, government, and commercial software vendors.
+          </p>
+
+          <p>
+            Most recently, Brent served as a VP, Lead Information Security Engineer at
+            Wells Fargo, where he helped design and build internal platforms for
+            cybersecurity metrics, data visualization, and deployment workflows across
+            large Hadoop-backed systems. His work there supported both operational
+            teams and executive decision-makers.
+          </p>
+
+          <p>
+            Prior to that, he delivered full-stack Node/TypeScript projects for
+            Fortune&nbsp;50 retail and banking clients through Teksystems, led backend
+            efforts on automotive and airline projects at Soltech, and spent years
+            developing commercial identity management and governance products at
+            Quest/Dell Software.
+          </p>
+
+          <p>
+            Alongside enterprise work, Brent has maintained a long-running freelance
+            practice building election reporting tools, identity connectors, and other
+            specialized applications. Rockwood Lab is the continuation of that work:
+            a small, focused practice that combines software craftsmanship with
+            practical prototyping.
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section container" id="contact">
+        <div class="section-title">Contact</div>
+        <div class="section-divider"></div>
+
+        <div class="contact-body">
+          <p>Interested in working together or exploring a project?</p>
+          <p>
+            <span class="contact-label">Email:</span>
+            <a href="mailto:brent@rockwoodlab.com">brent@rockwoodlab.com</a>
+          </p>
+          <p>
+            <span class="contact-label">Phone:</span>
+            <a href="tel:+14049602864">+1&nbsp;404&nbsp;960&nbsp;2864</a>
+          </p>
+          <p>
+            <span class="contact-label">LinkedIn:</span>
+            <a href="https://www.linkedin.com/in/brentrockwood/" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/brentrockwood
+            </a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; <span id="year"></span> Rockwood Lab LLC. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
