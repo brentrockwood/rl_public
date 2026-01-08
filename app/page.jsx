@@ -1,11 +1,106 @@
-import Image from "next/image";
-import ThemeToggle from "../components/ThemeToggle";
+import SiteHeader from "../components/SiteHeader";
 
 const stats = [
   { value: "20+ years", label: "Production engineering leadership" },
   { value: "3 domains", label: "Software, data, embedded" },
   { value: "Senior-led", label: "Hands-on delivery" },
 ];
+
+const hiringSteps = [
+  {
+    step: "01",
+    title: "Discovery Call",
+    description:
+      "We start with a quick call to understand your tech needs, team structure, and project goals. You talk, we listen.",
+    icon: "discovery",
+    connector: "right",
+  },
+  {
+    step: "02",
+    title: "Team Building",
+    description:
+      "We handpick profiles that match your requirements - not just technically, but culturally too. (We call it K+S)*A: knowledge, skills, and attitude.",
+    icon: "team",
+    connector: "right",
+  },
+  {
+    step: "03",
+    title: "Selection",
+    description:
+      "You receive a shortlist of candidates. You interview, choose, and approve who joins. We're here to advise - but you stay in control.",
+    icon: "selection",
+    connector: "down",
+  },
+  {
+    step: "06",
+    title: "Continuous Improvement",
+    description:
+      "We check in regularly to ensure performance, fit, and delivery stay sharp - and that your team keeps getting better.",
+    icon: "improvement",
+    connector: "right",
+  },
+  {
+    step: "05",
+    title: "Support and Scale",
+    description:
+      "You get ongoing support from a dedicated account manager and the option to grow your team as your project evolves.",
+    icon: "support",
+    connector: "right",
+  },
+  {
+    step: "04",
+    title: "Onboarding",
+    description:
+      "Your chosen devs integrate into your team, tools, and rituals. They report to you, work on your tasks, and act as part of your squad from day one.",
+    icon: "onboarding",
+  },
+];
+
+const hiringIcons = {
+  discovery: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="6" y="3" width="12" height="18" rx="2" />
+      <path d="M9 7h6" />
+      <circle cx="12" cy="17" r="1" />
+    </svg>
+  ),
+  team: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="9" cy="9" r="3" />
+      <path d="M4 20c1.5-3 8.5-3 10 0" />
+      <path d="M17 8v6" />
+      <path d="M14 11h6" />
+    </svg>
+  ),
+  selection: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="8" />
+      <path d="M8 12l2.5 2.5L16 9" />
+    </svg>
+  ),
+  onboarding: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3" y="4" width="10" height="16" rx="2" />
+      <path d="M13 12h7" />
+      <path d="M17 8l4 4-4 4" />
+    </svg>
+  ),
+  support: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="7" />
+      <path d="M12 5v4" />
+      <path d="M12 15v4" />
+      <path d="M5 12h4" />
+      <path d="M15 12h4" />
+    </svg>
+  ),
+  improvement: (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 16l5-5 4 4 7-7" />
+      <path d="M15 8h6v6" />
+    </svg>
+  ),
+};
 
 const services = [
   {
@@ -46,34 +141,6 @@ const services = [
   },
 ];
 
-const engagements = [
-  "Fractional CTO and architecture leadership",
-  "Project-based delivery and builds",
-  "Rapid prototypes and proof of concept sprints",
-  "Embedded team augmentation",
-];
-
-const process = [
-  {
-    step: "01",
-    title: "Discovery and direction",
-    description:
-      "Align on outcomes, constraints, and success metrics. Define a roadmap and risk map before a single line ships.",
-  },
-  {
-    step: "02",
-    title: "Build and iterate",
-    description:
-      "Ship in tight increments with testing, instrumentation, and documentation so teams can move fast without surprises.",
-  },
-  {
-    step: "03",
-    title: "Scale and support",
-    description:
-      "Harden for production, train teams, and map the next phase so delivery keeps compounding.",
-  },
-];
-
 const experience = [
   {
     title: "Cybersecurity metrics platforms",
@@ -101,17 +168,6 @@ const experience = [
   },
 ];
 
-const techStack = [
-  "Node.js",
-  "TypeScript",
-  "React",
-  "GraphQL",
-  "SQL",
-  "Embedded",
-  "ESP32",
-  "Raspberry Pi",
-];
-
 const founderHighlights = [
   "Former VP, Lead Information Security Engineer at Wells Fargo",
   "Led cybersecurity metrics, data visualization, and deployment workflows",
@@ -124,26 +180,7 @@ export default function Home() {
 
   return (
     <div className="page">
-      <header className="site-header">
-        <div className="container header-inner">
-          <div className="logo">
-            <Image
-              src="/logo_v1.svg"
-              alt="Rockwood Lab"
-              width={260}
-              height={76}
-              priority
-            />
-          </div>
-          <nav className="nav" aria-label="Primary">
-            <a href="#capabilities">Capabilities</a>
-            <a href="#process">Process</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <ThemeToggle />
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="hero container">
@@ -172,30 +209,6 @@ export default function Home() {
                     <strong>{stat.value}</strong>
                     <span>{stat.label}</span>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="hero-panel card reveal" style={{ "--delay": "0.1s" }}>
-              <div className="panel-header">
-                <div>
-                  <p className="panel-title">Engagement models</p>
-                  <p className="panel-subtitle">
-                    Flexible support that scales with your team.
-                  </p>
-                </div>
-                <span className="panel-badge">Senior-led</span>
-              </div>
-              <ul className="list">
-                {engagements.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <div className="tag-group">
-                {techStack.map((tech) => (
-                  <span key={tech} className="tag">
-                    {tech}
-                  </span>
                 ))}
               </div>
             </div>
@@ -242,25 +255,23 @@ export default function Home() {
 
         <section className="section section-muted" id="process">
           <div className="container">
-            <div className="section-header">
-              <div>
-                <p className="section-eyebrow">Process</p>
-                <h2 className="section-title">A clear path from idea to scale.</h2>
-                <p className="section-subtitle">
-                  Structured delivery keeps timelines realistic and outcomes
-                  measurable.
-                </p>
-              </div>
+            <div className="flow-header">
+              <p className="section-eyebrow">Process</p>
+              <h2 className="section-title">Hello to Hired in 2 Weeks or Less</h2>
+              <p className="section-subtitle">We make hiring top developers easy.</p>
+              <p className="flow-intro">Here's how it works:</p>
             </div>
 
-            <div className="grid grid-three">
-              {process.map((step, index) => (
+            <div className="flow-grid">
+              {hiringSteps.map((step) => (
                 <article
                   key={step.step}
-                  className="card process-card reveal"
-                  style={{ "--delay": `${0.12 + index * 0.1}s` }}
+                  className={`card flow-card${step.connector ? ` connector-${step.connector}` : ""}`}
                 >
-                  <span className="step-number">{step.step}</span>
+                  <span className="flow-step">Step {step.step}</span>
+                  <div className="flow-icon" aria-hidden="true">
+                    {hiringIcons[step.icon]}
+                  </div>
                   <h3>{step.title}</h3>
                   <p>{step.description}</p>
                 </article>
