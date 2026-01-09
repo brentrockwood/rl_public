@@ -4,16 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 
-const navItems = [
-  { href: "#capabilities", label: "Capabilities" },
-  { href: "#experience", label: "Experience" },
-  { href: "#process", label: "Process" },
-  { href: "#success-stories", label: "Success Stories" },
-  { href: "#who", label: "Leadership" },
-  { href: "#contact", label: "Contact" },
-];
-
-export default function SiteHeader() {
+export default function SiteHeader({ navItems = [] }) {
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
