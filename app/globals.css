@@ -158,6 +158,23 @@ main {
   padding: 4px;
 }
 
+.logo-image {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logo-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .logo-light {
+  display: none;
+}
+
+:root[data-theme="dark"] .logo-dark {
+  display: inline-flex;
+}
+
 .nav {
   display: flex;
   gap: 20px;

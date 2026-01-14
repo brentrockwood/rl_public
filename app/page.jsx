@@ -13,6 +13,7 @@ import {
   experienceSection,
   footerSection,
   heroSection,
+  headerLogo,
   leadershipSection,
   navItems,
   processSection,
@@ -24,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="page">
-      <SiteHeader navItems={navItems} />
+      <SiteHeader navItems={navItems} logo={headerLogo} />
 
       <main>
         <HeroSection {...heroSection} />

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 
-export default function SiteHeader({ navItems = [] }) {
+export default function SiteHeader({ navItems = [], logo }) {
   const [isHidden, setIsHidden] = useState(false);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
@@ -36,13 +36,24 @@ export default function SiteHeader({ navItems = [] }) {
     <header className={`site-header${isHidden ? " is-hidden" : ""}`}>
       <div className="container header-inner">
         <div className="logo">
-          <Image
-            src="/logo_v1.svg"
-            alt="Rockwood Lab"
-            width={140}
-            height={40}
-            priority
-          />
+          <span className="logo-image logo-light">
+            <Image
+              src={logo.lightSrc}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+              priority
+            />
+          </span>
+          <span className="logo-image logo-dark">
+            <Image
+              src={logo.darkSrc}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+              priority
+            />
+          </span>
         </div>
         <nav className="nav" aria-label="Primary">
           {navItems.map((item) => (

@@ -15,12 +15,22 @@ export default function SiteFooter({
       <div className="container footer-top">
         <div className="footer-brand">
           <div className="footer-logo">
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={logo.width}
-              height={logo.height}
-            />
+            <span className="logo-image logo-light">
+              <Image
+                src={logo.lightSrc}
+                alt={logo.alt}
+                width={logo.width}
+                height={logo.height}
+              />
+            </span>
+            <span className="logo-image logo-dark">
+              <Image
+                src={logo.darkSrc}
+                alt={logo.alt}
+                width={logo.width}
+                height={logo.height}
+              />
+            </span>
           </div>
           <p className="footer-tagline">{tagline}</p>
           <p className="footer-description">{description}</p>

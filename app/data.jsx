@@ -7,6 +7,14 @@ export const navItems = [
   { href: "#contact", label: "Contact" },
 ];
 
+export const headerLogo = {
+  lightSrc: "/logo_v1.svg",
+  darkSrc: "/logo_dark_mode.svg",
+  alt: "Rockwood Lab",
+  width: 140,
+  height: 40,
+};
+
 export const heroSection = {
   eyebrow: "Independent engineering studio",
   title: "Practical engineering for software, data, and prototypes.",
@@ -331,7 +339,8 @@ export const contactSection = {
 
 export const footerSection = {
   logo: {
-    src: "/logo_v1.svg",
+    lightSrc: "/logo_v1.svg",
+    darkSrc: "/logo_dark_mode.svg",
     alt: "Rockwood Lab",
     width: 150,
     height: 42,
