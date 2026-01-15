@@ -381,7 +381,7 @@ export const footerSection = {
       ),
     },
     {
-      href: "https://www.linkedin.com/in/brentrockwood/",
+      href: "https://www.linkedin.com/company/rockwood-lab/",
       label: "LinkedIn",
       newTab: true,
       icon: (
