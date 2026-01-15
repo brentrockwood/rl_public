@@ -16,7 +16,7 @@ export const headerLogo = {
 };
 
 export const heroSection = {
-  eyebrow: "Independent engineering studio",
+  eyebrow: "Applied engineering studio",
   title: "Practical engineering for software, data, and prototypes.",
   subtitle:
     "Rockwood Lab is a senior-led engineering practice led by Brent Rockwood, delivering scalable systems and rapid prototypes for teams that need experienced, hands-on help.",
@@ -36,7 +36,7 @@ export const capabilitiesSection = {
   title: "Deep technical delivery across the stack.",
   subtitle:
     "From architecture to prototypes, Rockwood Lab delivers scalable systems with a focus on reliability, security, and clarity.",
-  cta: { href: "#contact", label: "Schedule a call" },
+  cta: { href: "https://calendar.app.google/zrhcrUpvDfyRHhgy7", label: "Schedule a call" },
   services: [
     {
       title: "Full-stack software delivery",
@@ -298,6 +298,7 @@ export const contactSection = {
     "Embedded systems and IoT delivery",
     "Data platforms, analytics, and automation",
   ],
+  scheduleLink: "https://calendar.app.google/zrhcrUpvDfyRHhgy7",
   form: {
     action: "mailto:brent@rockwoodlab.com",
     method: "post",

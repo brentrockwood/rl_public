@@ -15,7 +15,7 @@ export default function CapabilitiesSection({
             <h2 className="section-title">{title}</h2>
             <p className="section-subtitle">{subtitle}</p>
           </div>
-          <a className="link" href={cta.href}>
+          <a className="btn schedule-cta" href={cta.href} target="_blank" rel="noopener noreferrer">
             {cta.label}
           </a>
         </div>
