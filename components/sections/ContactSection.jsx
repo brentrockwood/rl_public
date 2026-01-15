@@ -89,7 +89,7 @@ function ContactForm({ form }) {
   );
 }
 
-export default function ContactSection({ eyebrow, title, subtitle, points, form, scheduleLink }) {
+export default function ContactSection({ eyebrow, title, subtitle, points, form }) {
   return (
     <section className="section contact-section" id="contact">
       <div className="container">
@@ -102,11 +102,6 @@ export default function ContactSection({ eyebrow, title, subtitle, points, form,
           </div>
 
           <ContactForm form={form} />
-          <div className="contact-note">
-            <a className="link" href={scheduleLink} target="_blank" rel="noopener noreferrer">
-              (Schedule a call)
-            </a>
-          </div>
         </div>
       </div>
     </section>
