@@ -1,9 +1,7 @@
 export const navItems = [
-  { href: "#capabilities", label: "Capabilities" },
+  { href: "#capabilities", label: "What I build" },
   { href: "#experience", label: "Experience" },
-  { href: "#process", label: "Process" },
-  { href: "#success-stories", label: "Success Stories" },
-  { href: "#who", label: "Leadership" },
+  { href: "#who", label: "About" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -16,79 +14,66 @@ export const headerLogo = {
 };
 
 export const heroSection = {
-  eyebrow: "Applied engineering studio",
-  title: "Practical engineering for software, data, and prototypes.",
+  eyebrow: "Applied AI engineering",
+  title: "Practical AI systems for real work.",
   subtitle:
-    "Rockwood Lab is a senior-led engineering practice led by Brent Rockwood, delivering scalable systems and rapid prototypes for teams that need experienced, hands-on help.",
+    "Rockwood Lab designs and builds secure, reliable AI systems for teams with important workflows to improve. From a focused prototype to a production deployment, the work stays senior-led and hands-on.",
   ctas: {
-    primary: { href: "#contact", label: "Start a project" },
-    secondary: { href: "#capabilities", label: "View capabilities" },
+    primary: { href: "#contact", label: "Start a conversation" },
+    secondary: { href: "#capabilities", label: "See how I work" },
   },
   stats: [
-    { value: "20+ years", label: "Production engineering leadership" },
-    { value: "3 domains", label: "Software, data, embedded" },
+    { value: "Three decades", label: "Production engineering leadership" },
+    { value: "Secure", label: "Security-minded delivery" },
     { value: "Senior-led", label: "Hands-on delivery" },
   ],
 };
 
 export const capabilitiesSection = {
-  eyebrow: "Capabilities",
-  title: "Deep technical delivery across the stack.",
+  eyebrow: "What I build",
+  title: "AI systems that earn a place in the workflow.",
   subtitle:
-    "From architecture to prototypes, Rockwood Lab delivers scalable systems with a focus on reliability, security, and clarity.",
+    "The useful work is usually more than a model call. It includes the workflow, the source data, the interface, evaluation, access controls, monitoring, and a path for people to stay in control.",
   cta: { href: "https://calendar.app.google/zrhcrUpvDfyRHhgy7", label: "Schedule a call" },
   services: [
     {
-      title: "Full-stack software delivery",
+      title: "AI workflow and agent systems",
       description:
-        "Design and implementation of secure web applications, internal platforms, and APIs with production-grade tooling.",
-      icon: "stack",
+        "Design and build task-focused systems that help teams research, classify, draft, triage, coordinate, and act—with appropriate review and clear boundaries.",
+      icon: "workflow",
     },
     {
-      title: "Data and visualization systems",
+      title: "Knowledge and decision tools",
       description:
-        "Dashboards, metrics, and operational intelligence that turn complex data into decisions.",
-      icon: "data",
+        "Turn scattered documents, data, and operating knowledge into useful internal tools with traceability, permissions, and interfaces built for the people doing the work.",
+      icon: "knowledge",
     },
     {
-      title: "Embedded and prototype engineering",
+      title: "Evaluation, reliability, and secure deployment",
       description:
-        "Rapid proof of concept builds for IoT, hardware, and connected devices with custom enclosures.",
-      icon: "embedded",
-    },
-    {
-      title: "Architecture and advisory",
-      description:
-        "Technical direction, modernization plans, and security-focused reviews to keep systems scalable.",
-      icon: "advisory",
+        "Make AI systems testable and dependable: define success criteria, evaluate behavior, design failure paths, and deploy with the security and operational controls the context requires.",
+      icon: "evaluation",
     },
   ],
   icons: {
-    stack: (
+    workflow: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4 8l8-4 8 4-8 4-8-4Z" />
         <path d="M4 12l8 4 8-4" />
         <path d="M4 16l8 4 8-4" />
       </svg>
     ),
-    data: (
+    knowledge: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <ellipse cx="12" cy="6" rx="7" ry="3" />
         <path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6" />
         <path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
       </svg>
     ),
-    embedded: (
+    evaluation: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="6" y="6" width="12" height="12" rx="2" />
-        <path d="M3 9h3M3 15h3M18 9h3M18 15h3M9 3v3M15 3v3M9 18v3M15 18v3" />
-      </svg>
-    ),
-    advisory: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 19h16" />
-        <path d="M7 16l5-10 5 10" />
-        <path d="M9 12h6" />
+        <circle cx="12" cy="12" r="8" />
+        <path d="M8 12l2.5 2.5L16 9" />
       </svg>
     ),
   },
@@ -96,12 +81,12 @@ export const capabilitiesSection = {
 
 export const experienceSection = {
   eyebrow: "Experience",
-  title: "Enterprise depth, startup pace.",
+  title: "Production experience, applied to AI.",
   subtitle:
-    "Two decades of building production systems for enterprise and commercial software teams.",
+    "Rockwood Lab brings three decades of production engineering and security-minded delivery to AI work. The goal is not a demo that looks clever; it is a system people can use, evaluate, and maintain.",
   items: [
     {
-      title: "Cybersecurity metrics platforms",
+      title: "Secure systems and operational intelligence",
       description:
         "Designed and built internal platforms for data visualization, deployment workflows, and executive reporting.",
       meta: "Enterprise security",
@@ -109,15 +94,15 @@ export const experienceSection = {
       alt: "Cybersecurity project highlight image.",
     },
     {
-      title: "Fortune 50 modernization",
+      title: "Complex platforms and modernization",
       description:
-        "Full-stack Node and TypeScript delivery for retail and banking clients across large-scale modernization programs.",
+        "Node and TypeScript delivery for retail and banking clients across large-scale modernization programs.",
       meta: "Retail and banking",
       image: "/50.jpg",
       alt: "Fortune 50 modernization project highlight image.",
     },
     {
-      title: "Identity governance products",
+      title: "Identity, integration, and governance",
       description:
         "Backend and integration leadership for commercial identity management solutions at Quest and Dell Software.",
       meta: "Commercial software",
@@ -125,7 +110,7 @@ export const experienceSection = {
       alt: "Identity governance project highlight image.",
     },
     {
-      title: "Specialized reporting systems",
+      title: "High-consequence reporting workflows",
       description:
         "Election reporting tools, identity connectors, and bespoke workflows for public and private sector teams.",
       meta: "Mission-critical delivery",
@@ -135,170 +120,32 @@ export const experienceSection = {
   ],
 };
 
-export const processSection = {
-  eyebrow: "Process",
-  title: "Hello to Hired in 2 Weeks or Less",
-  subtitle: "We make hiring top developers easy.",
-  intro: "Here's how it works:",
-  steps: [
-    {
-      step: "01",
-      title: "Discovery Call",
-      description:
-        "We start with a quick call to understand your tech needs, team structure, and project goals. You talk, we listen.",
-      icon: "discovery",
-      connector: "right",
-    },
-    {
-      step: "02",
-      title: "Team Building",
-      description:
-        "We handpick profiles that match your requirements - not just technically, but culturally too. (We call it K+S)*A: knowledge, skills, and attitude.",
-      icon: "team",
-      connector: "right",
-    },
-    {
-      step: "03",
-      title: "Selection",
-      description:
-        "You receive a shortlist of candidates. You interview, choose, and approve who joins. We're here to advise - but you stay in control.",
-      icon: "selection",
-      connector: "down",
-    },
-    {
-      step: "06",
-      title: "Continuous Improvement",
-      description:
-        "We check in regularly to ensure performance, fit, and delivery stay sharp - and that your team keeps getting better.",
-      icon: "improvement",
-      connector: "right",
-    },
-    {
-      step: "05",
-      title: "Support and Scale",
-      description:
-        "You get ongoing support from a dedicated account manager and the option to grow your team as your project evolves.",
-      icon: "support",
-      connector: "right",
-    },
-    {
-      step: "04",
-      title: "Onboarding",
-      description:
-        "Your chosen devs integrate into your team, tools, and rituals. They report to you, work on your tasks, and act as part of your squad from day one.",
-      icon: "onboarding",
-    },
-  ],
-  icons: {
-    discovery: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="6" y="3" width="12" height="18" rx="2" />
-        <path d="M9 7h6" />
-        <circle cx="12" cy="17" r="1" />
-      </svg>
-    ),
-    team: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="9" cy="9" r="3" />
-        <path d="M4 20c1.5-3 8.5-3 10 0" />
-        <path d="M17 8v6" />
-        <path d="M14 11h6" />
-      </svg>
-    ),
-    selection: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="8" />
-        <path d="M8 12l2.5 2.5L16 9" />
-      </svg>
-    ),
-    onboarding: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <rect x="3" y="4" width="10" height="16" rx="2" />
-        <path d="M13 12h7" />
-        <path d="M17 8l4 4-4 4" />
-      </svg>
-    ),
-    support: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <circle cx="12" cy="12" r="7" />
-        <path d="M12 5v4" />
-        <path d="M12 15v4" />
-        <path d="M5 12h4" />
-        <path d="M15 12h4" />
-      </svg>
-    ),
-    improvement: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 16l5-5 4 4 7-7" />
-        <path d="M15 8h6v6" />
-      </svg>
-    ),
-  },
-};
-
-export const successStoriesSection = {
-  title: "Success Stories",
-  link: { href: "#contact", label: "Other projects" },
-  stories: [
-    {
-      title: "Conference management and networking platform for professionals",
-      image: "/CC.jpg",
-      alt: "CC project highlight image.",
-      client: "Conference Connect",
-      href: "https://conferenceconnect.com",
-    },
-    {
-      title: "Travel industry event and business solutions platform",
-      image: "/Travel.jpg",
-      alt: "Travel Industry Solutions",
-      client: "Travel Industry Solutions",
-      href: "https://Travelindustrysolutions.com",
-    },
-    {
-      title: "Home design industry professionals' networking platform.",
-      image: "/HDG.jpg",
-      alt: "HDG project highlight image.",
-      client: "Home Design Guild",
-      href: "https://Homedesignguild.com",
-    },
-  ],
-};
-
 export const leadershipSection = {
-  eyebrow: "Who you work with",
-  title: "Senior team, hands-on delivery",
+  eyebrow: "About",
+  title: "Who you work with",
   members: [
     {
       name: "Brent Rockwood",
       role: "Founder & Principal Engineer",
       bio:
-        "Applied engineering leader focused on secure, scalable platforms and practical delivery.",
+        "Brent is a production engineering leader who builds practical AI systems with a focus on security, reliability, and the real constraints of the work. Engagements are led directly by Brent from the first conversation through delivery.",
       image: "/leadership-brent.jpg",
       alt: "Portrait of Brent Rockwood.",
-    },
-    {
-      name: "Kevin Lim",
-      role: "Lead Developer",
-      bio:
-        "Lead developer delivering durable software systems and hands-on team support.",
-      image: "/leadership-kevin.jpg",
-      alt: "Portrait of Kevin Lim.",
     },
   ],
 };
 
 export const contactSection = {
-  eyebrow: "Start a project",
-  title: "Tell us about the product, metric, or workflow you need to move.",
+  eyebrow: "Start a conversation",
+  title: "Have an AI workflow worth improving?",
   subtitle:
-    "We respond within one business day. If there is a fit, we propose a lightweight discovery sprint to frame KPIs, technical scope, and the fastest path to value.",
+    "Tell me what your team is trying to make easier, faster, safer, or more reliable. A good first conversation covers the people doing the work, the systems and information involved, the constraints, and how you will know the result is useful.",
   points: [
-    "Fractional CTO and architecture leadership",
-    "Product and platform modernization",
-    "Embedded systems and IoT delivery",
-    "Data platforms, analytics, and automation",
+    "What workflow are you trying to improve?",
+    "Who uses it today, and what gets in their way?",
+    "What systems, data, or documents would it need to work with?",
+    "What constraints matter: security, privacy, reliability, deployment, or review?",
   ],
-  scheduleLink: "https://calendar.app.google/zrhcrUpvDfyRHhgy7",
   form: {
     action: "mailto:brent@rockwoodlab.com",
     method: "post",
@@ -330,8 +177,8 @@ export const contactSection = {
       },
       message: {
         id: "contact-message",
-        label: "What do you want to build?",
-        placeholder: "Goals, KPIs, timelines",
+        label: "What AI workflow would you like to improve?",
+        placeholder: "Workflow, systems or documents involved, constraints, and what success looks like",
         rows: 5,
       },
     },
@@ -346,9 +193,9 @@ export const footerSection = {
     width: 150,
     height: 42,
   },
-  tagline: "Applied engineering studio",
+  tagline: "Applied AI engineering",
   description:
-    "We build production systems across software, data, and embedded platforms for teams that need dependable delivery and senior guidance.",
+    "Rockwood Lab builds practical AI systems for teams that need dependable, senior-led engineering.",
   socials: [
     {
       href: "https://calendar.app.google/zrhcrUpvDfyRHhgy7",
@@ -396,11 +243,11 @@ export const footerSection = {
   ],
   navItems,
   focusItems: [
-    "Production engineering",
-    "Platform modernization",
-    "Embedded systems",
-    "Data platforms",
-    "Automation delivery",
+    "AI workflows",
+    "Knowledge systems",
+    "Agent systems",
+    "Evaluation",
+    "Secure deployment",
   ],
   legalLinks: [
     { href: "#", label: "Privacy Policy" },

@@ -5,8 +5,6 @@ import ContactSection from "../components/sections/ContactSection";
 import ExperienceSection from "../components/sections/ExperienceSection";
 import HeroSection from "../components/sections/HeroSection";
 import LeadershipSection from "../components/sections/LeadershipSection";
-import ProcessSection from "../components/sections/ProcessSection";
-import SuccessStoriesSection from "../components/sections/SuccessStoriesSection";
 import {
   capabilitiesSection,
   contactSection,
@@ -16,8 +14,6 @@ import {
   headerLogo,
   leadershipSection,
   navItems,
-  processSection,
-  successStoriesSection,
 } from "./data";
 
 export default function Home() {
@@ -33,8 +29,6 @@ export default function Home() {
         <div className="section-group">
           <CapabilitiesSection {...capabilitiesSection} />
           <ExperienceSection {...experienceSection} />
-          <ProcessSection {...processSection} />
-          <SuccessStoriesSection {...successStoriesSection} />
           <LeadershipSection {...leadershipSection} />
           <ContactSection {...contactSection} />
         </div>

@@ -14,14 +14,14 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Rockwood Lab",
+  title: "Rockwood Lab | Practical AI Systems for Real Work",
   description:
-    "Rockwood Lab is an independent engineering practice providing full-stack software development and prototype engineering led by Brent Rockwood.",
+    "Rockwood Lab designs and builds secure, reliable AI systems for real workflows—senior-led, hands-on engineering from prototype through production.",
   metadataBase: new URL("https://rockwoodlab.com"),
   openGraph: {
-    title: "Rockwood Lab",
+    title: "Rockwood Lab | Practical AI Systems for Real Work",
     description:
-      "Senior-led engineering for software, data systems, and rapid prototypes.",
+      "Rockwood Lab designs and builds secure, reliable AI systems for real workflows—senior-led, hands-on engineering from prototype through production.",
     url: "https://rockwoodlab.com",
     siteName: "Rockwood Lab",
     type: "website",
