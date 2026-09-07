@@ -1,33 +1,19 @@
 import "./globals.css";
-import { Sora, Space_Grotesk } from "next/font/google";
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
 
 export const metadata = {
-  title: "Rockwood Lab | Practical AI Systems for Real Work",
-  description:
-    "Rockwood Lab designs and builds secure, reliable AI systems for real workflows—senior-led, hands-on engineering from prototype through production.",
+  title: "Rockwood Lab | Useful AI, under observation",
+  description: "Rockwood Lab is an independent research and practice for useful AI systems under observation.",
   metadataBase: new URL("https://rockwoodlab.com"),
   openGraph: {
-    title: "Rockwood Lab | Practical AI Systems for Real Work",
-    description:
-      "Rockwood Lab designs and builds secure, reliable AI systems for real workflows—senior-led, hands-on engineering from prototype through production.",
+    title: "Rockwood Lab | Useful AI, under observation",
+    description: "An independent lab for systems, security, and applied AI.",
     url: "https://rockwoodlab.com",
     siteName: "Rockwood Lab",
     type: "website",
   },
   icons: {
     icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
@@ -39,16 +25,12 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0E254A",
+  themeColor: "#f7f7f4",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      data-theme="dark"
-      className={`${sora.variable} ${spaceGrotesk.variable}`}
-    >
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
