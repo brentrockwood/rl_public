@@ -36,7 +36,7 @@ export default function Home() {
       <Header />
       <main id="main">
         <section className="hero" id="top" aria-labelledby="hero-title">
-          <p className="section-label">Independent engineering practice</p>
+          <p className="section-label">Independent R&amp;D</p>
           <div className="hero-copy">
             <h1 id="hero-title">Pursuing<br /><em>unreasonable effectiveness.</em></h1>
           </div>

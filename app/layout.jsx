@@ -1,12 +1,12 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Rockwood Lab | Independent Engineering Practice",
-  description: "Independent engineering practice working on AI safety, workflow automation, and infrastructure design.",
+  title: "Rockwood Lab | Independent R&D",
+  description: "Independent R&D working on AI safety, workflow automation, and infrastructure design.",
   metadataBase: new URL("https://rockwoodlab.com"),
   openGraph: {
-    title: "Rockwood Lab | Independent Engineering Practice",
-    description: "Independent engineering practice working on AI safety, workflow automation, and infrastructure design.",
+    title: "Rockwood Lab | Independent R&D",
+    description: "Independent R&D working on AI safety, workflow automation, and infrastructure design.",
     url: "https://rockwoodlab.com",
     siteName: "Rockwood Lab",
     type: "website",

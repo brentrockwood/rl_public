@@ -5,7 +5,8 @@ const files = ["app/layout.jsx", "app/page.jsx", "app/schedule/page.jsx"];
 const content = await Promise.all(files.map((file) => readFile(file, "utf8"))).then((parts) => parts.join("\n"));
 
 for (const phrase of [
-  "Independent Engineering Practice",
+  "Independent R&D",
+  "Independent R&amp;D",
   "AI safety, workflow automation, and infrastructure design.",
   "Pursuing",
   "unreasonable effectiveness.",
