@@ -1,11 +1,11 @@
-import Image from "next/image";
+import LogoMark from "../components/LogoMark";
 import ThemeToggle from "../components/ThemeToggle";
 
 function Header() {
   return (
     <header className="site-header home-header">
       <a className="brand" href="#top" aria-label="Rockwood Lab, home">
-        <Image src="/favicon.svg" width={32} height={32} alt="" />
+        <LogoMark />
         <span>Rockwood<br />Lab</span>
       </a>
       <nav aria-label="Primary navigation">

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import LogoMark from "../../components/LogoMark";
 import ThemeToggle from "../../components/ThemeToggle";
 
 const scheduleUrl = "https://calendar.app.google/zrhcrUpvDfyRHhgy7";
@@ -15,7 +15,7 @@ export default function Schedule() {
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
         <Link className="brand" href="/" aria-label="Rockwood Lab, home">
-          <Image src="/favicon.svg" width={32} height={32} alt="" />
+          <LogoMark />
           <span>Rockwood<br />Lab</span>
         </Link>
         <nav aria-label="Primary navigation">
@@ -36,7 +36,7 @@ export default function Schedule() {
 
         <section className="booking-panel" aria-labelledby="booking-title">
           <div className="booking-mark" aria-hidden="true">
-            <Image src="/rl.svg" width={256} height={256} alt="" />
+            <LogoMark />
           </div>
           <p className="section-label">Before we meet</p>
           <h2 id="booking-title">A short note is enough.</h2>
