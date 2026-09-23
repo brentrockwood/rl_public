@@ -5,13 +5,20 @@ const files = ["app/layout.jsx", "app/page.jsx", "app/schedule/page.jsx"];
 const content = await Promise.all(files.map((file) => readFile(file, "utf8"))).then((parts) => parts.join("\n"));
 
 for (const phrase of [
-  "Useful AI,",
-  "under observation.",
+  "Independent Engineering Practice",
+  "AI safety, workflow automation, and infrastructure design.",
   "Pursuing",
   "unreasonable effectiveness.",
   "Things I’ve been building.",
   "Provenance Inspector",
   "ACS adapters",
+  "Capability",
+  "Evidence",
+  "Control",
+  "https://agentcontrolstandard.org/",
+  "Making the pieces work together.",
+  "Beat the hell out of it. Believe the evidence.",
+  "I’ve been developing software since the 1990s",
   "Bring one",
   "Open available times",
   "https://calendar.app.google/zrhcrUpvDfyRHhgy7",

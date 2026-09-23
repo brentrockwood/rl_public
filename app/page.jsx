@@ -49,15 +49,15 @@ export default function Home() {
           </div>
           <div className="projects" aria-label="Recent work">
             <article>
-              <p className="number">Research apparatus</p>
+              <p className="number">Capability</p>
               <h3>Hammer</h3>
-              <p className="project-description">A controlled environment for studying whether language-model agents build useful structures from minimal filesystem primitives.</p>
+              <p className="project-description">What can an AI agent build from little more than the ability to read and write files? Hammer provides a controlled environment for investigating that question.</p>
               <div className="project-links">
                 <a href="https://github.com/brentrockwood/hammer" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
               </div>
             </article>
             <article>
-              <p className="number">Provenance tooling</p>
+              <p className="number">Evidence</p>
               <h3>Provenance Inspector</h3>
               <p className="project-description">A Chrome extension that checks selected text and images for verifiable provenance signals while keeping the limits of that evidence visible.</p>
               <div className="project-links">
@@ -65,9 +65,9 @@ export default function Home() {
               </div>
             </article>
             <article>
-              <p className="number">Agent control</p>
+              <p className="number">Control</p>
               <h3>ACS adapters</h3>
-              <p className="project-description">Experimental Pi and OpenCode integrations for the <a href="https://agentcontrolstandard.org/" target="_blank" rel="noreferrer">Agent Control Standard</a>, placing a remote Guardian decision point before model-initiated tool calls.</p>
+              <p className="project-description">Experimental Pi and OpenCode integrations for the <a href="https://agentcontrolstandard.org/" target="_blank" rel="noreferrer">Agent Control Standard</a>, adding observability and control over agent tool use.</p>
               <div className="project-links">
                 <a href="https://github.com/brentrockwood/pi-acs-core" target="_blank" rel="noreferrer">Pi <span aria-hidden="true">↗</span></a>
                 <a href="https://github.com/brentrockwood/opencode-acs-core" target="_blank" rel="noreferrer">OpenCode <span aria-hidden="true">↗</span></a>
@@ -79,13 +79,9 @@ export default function Home() {
         <section className="practice ruled" id="practice" aria-labelledby="practice-title">
           <div className="section-label">Practice</div>
           <div className="practice-intro">
-            <h2 id="practice-title">A small lab for consequential work.</h2>
-            <p>Rockwood Lab takes on selected experiments and practical systems work. The starting point is a specific workflow, its people and source material, and a clear way to decide if the result helps.</p>
-          </div>
-          <div className="method">
-            <div><span>01</span><h3>Observe</h3><p>Name the work, constraints, decisions, and points where confidence should give way to review.</p></div>
-            <div><span>02</span><h3>Make</h3><p>Build a focused system around the task, including the interfaces and safeguards it needs.</p></div>
-            <div><span>03</span><h3>Learn</h3><p>Test it against realistic cases and use the evidence to refine, limit, or stop the experiment.</p></div>
+            <h2 id="practice-title">Making the pieces work together.</h2>
+            <p>I work on AI safety, workflow automation, and infrastructure design. Much of that work means connecting existing software and services into a system that fits the problem—not building everything from scratch.</p>
+            <p>Find the smallest version of the real problem. Build the smallest thing capable of answering the question. Beat the hell out of it. Believe the evidence.</p>
           </div>
         </section>
 
@@ -93,7 +89,7 @@ export default function Home() {
           <div className="section-label">About</div>
           <div>
             <h2 id="about-title">Rockwood Lab is the independent work of Brent Rockwood.</h2>
-            <p>Brent works across systems engineering, security, and applied AI. The lab is a place to develop useful tools carefully: with owner oversight, traceable decisions, and an honest account of what has and has not been demonstrated.</p>
+            <p>I’ve been developing software since the 1990s, including years working in identity and access management and cybersecurity. Rockwood Lab brings that experience to independent research and engineering.</p>
           </div>
         </section>
 
