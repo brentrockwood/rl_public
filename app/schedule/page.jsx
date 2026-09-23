@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import ThemeToggle from "../../components/ThemeToggle";
 
 const scheduleUrl = "https://calendar.app.google/zrhcrUpvDfyRHhgy7";
 
@@ -12,16 +14,17 @@ export default function Schedule() {
     <div className="page schedule-page">
       <a className="skip-link" href="#main">Skip to content</a>
       <header className="site-header">
-        <a className="brand" href="/" aria-label="Rockwood Lab, home">
+        <Link className="brand" href="/" aria-label="Rockwood Lab, home">
           <Image src="/favicon.svg" width={32} height={32} alt="" />
           <span>Rockwood<br />Lab</span>
-        </a>
+        </Link>
         <nav aria-label="Primary navigation">
-          <a href="/#research">Research</a>
-          <a href="/#practice">Practice</a>
-          <a href="/#about">About</a>
+          <Link href="/#research">Research</Link>
+          <Link href="/#practice">Practice</Link>
+          <Link href="/#about">About</Link>
           <a href="mailto:brent@rockwoodlab.com">Email</a>
         </nav>
+        <ThemeToggle />
       </header>
 
       <main id="main" className="schedule-main">

@@ -8,10 +8,25 @@ export default function ThemeToggle() {
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
     const savedTheme = window.localStorage.getItem(THEME_KEY);
-    const nextTheme = savedTheme === "light" ? "light" : "dark";
+    const hasSavedTheme = savedTheme === "light" || savedTheme === "dark";
+    const nextTheme = hasSavedTheme ? savedTheme : media.matches ? "dark" : "light";
+
+    // CSS applies the system theme before hydration; this keeps the control in sync.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTheme(nextTheme);
-    document.documentElement.dataset.theme = nextTheme;
+    if (hasSavedTheme) document.documentElement.dataset.theme = nextTheme;
+
+    const handleSystemChange = ({ matches }) => {
+      const saved = window.localStorage.getItem(THEME_KEY);
+      if (saved !== "light" && saved !== "dark") {
+        setTheme(matches ? "dark" : "light");
+      }
+    };
+
+    media.addEventListener("change", handleSystemChange);
+    return () => media.removeEventListener("change", handleSystemChange);
   }, []);
 
   const handleToggle = () => {

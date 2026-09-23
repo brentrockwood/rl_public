@@ -7,7 +7,11 @@ const content = await Promise.all(files.map((file) => readFile(file, "utf8"))).t
 for (const phrase of [
   "Useful AI,",
   "under observation.",
-  "The interesting work begins after the model answers.",
+  "Pursuing",
+  "unreasonable effectiveness.",
+  "Things I’ve been building.",
+  "Provenance Inspector",
+  "ACS adapters",
   "Bring one",
   "Open available times",
   "https://calendar.app.google/zrhcrUpvDfyRHhgy7",
