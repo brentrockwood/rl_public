@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Rockwood Lab | Independent R&D",
+  title: "Rockwood Lab",
   description: "Independent R&D working on AI safety, workflow automation, and infrastructure design.",
   metadataBase: new URL("https://rockwoodlab.com"),
   openGraph: {
