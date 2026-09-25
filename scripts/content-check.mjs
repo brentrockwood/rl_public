@@ -35,16 +35,6 @@ for (const id of ["hammer", "provenance-inspector", "acs-adapters"]) {
   assert.match(content, new RegExp(`<article id="${id}">`), `Missing project ID: ${id}`);
 }
 
-for (const label of [
-  "Repository: Hammer on GitHub",
-  "Repository: Provenance Inspector extension on GitHub",
-  "Pi ACS adapter repository on GitHub",
-  "OpenCode ACS adapter repository on GitHub",
-  "Open available times in Google Calendar",
-]) {
-  assert.ok(content.includes(`aria-label="${label}"`), `Missing unambiguous link name: ${label}`);
-}
-
 const outputFiles = {
   home: "out/index.html",
   schedule: "out/schedule/index.html",
@@ -126,3 +116,15 @@ for (const id of ["hammer", "provenance-inspector", "acs-adapters"]) {
   assert.ok(home.includes(`id="${id}"`), `Built home output is missing #${id}`);
 }
 assert.ok(home.includes('href="/schedule/"'), "Built home output is missing the schedule link");
+
+for (const [html, href, label] of [
+  [home, "https://github.com/brentrockwood/hammer", "Repository: Hammer on GitHub"],
+  [home, "https://github.com/brentrockwood/provenance-inspector-extension", "Repository: Provenance Inspector extension on GitHub"],
+  [home, "https://github.com/brentrockwood/pi-acs-core", "Pi ACS adapter repository on GitHub"],
+  [home, "https://github.com/brentrockwood/opencode-acs-core", "OpenCode ACS adapter repository on GitHub"],
+  [schedule, "https://calendar.app.google/zrhcrUpvDfyRHhgy7", "Open available times in Google Calendar"],
+]) {
+  const anchor = [...html.matchAll(/<a\b[^>]*>/gi)].find((match) => attribute(match[0], "href") === href);
+  assert.ok(anchor, `Missing link: ${href}`);
+  assert.equal(attribute(anchor[0], "aria-label"), label, `Incorrect link name: ${href}`);
+}
