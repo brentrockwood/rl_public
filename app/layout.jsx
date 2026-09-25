@@ -1,13 +1,38 @@
 import "./globals.css";
 
+const organizationId = "https://rockwoodlab.com/#rockwood-lab";
+const personId = "https://rockwoodlab.com/#brent-rockwood";
+
+const identityJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": organizationId,
+      name: "Rockwood Lab",
+      url: "https://rockwoodlab.com/",
+      email: "brent@rockwoodlab.com",
+    },
+    {
+      "@type": "Person",
+      "@id": personId,
+      name: "Brent Rockwood",
+      url: "https://rockwoodlab.com/#about",
+      email: "brent@rockwoodlab.com",
+      worksFor: { "@id": organizationId },
+    },
+  ],
+};
+
 export const metadata = {
   title: "Rockwood Lab",
   description: "Independent R&D working on AI safety, workflow automation, and infrastructure design.",
   metadataBase: new URL("https://rockwoodlab.com"),
+  alternates: { canonical: "https://rockwoodlab.com/" },
   openGraph: {
     title: "Rockwood Lab | Independent R&D",
     description: "Independent R&D working on AI safety, workflow automation, and infrastructure design.",
-    url: "https://rockwoodlab.com",
+    url: "https://rockwoodlab.com/",
     siteName: "Rockwood Lab",
     type: "website",
   },
@@ -34,7 +59,10 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script type="application/ld+json">{JSON.stringify(identityJsonLd)}</script>
+      </body>
     </html>
   );
 }

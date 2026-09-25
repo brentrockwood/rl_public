@@ -7,6 +7,14 @@ const scheduleUrl = "https://calendar.app.google/zrhcrUpvDfyRHhgy7";
 export const metadata = {
   title: "Schedule a conversation | Rockwood Lab",
   description: "Choose a time to talk with Rockwood Lab about a practical system, research question, or possible experiment.",
+  alternates: { canonical: "https://rockwoodlab.com/schedule/" },
+  openGraph: {
+    title: "Schedule a conversation | Rockwood Lab",
+    description: "Choose a time to talk with Rockwood Lab about a practical system, research question, or possible experiment.",
+    url: "https://rockwoodlab.com/schedule/",
+    siteName: "Rockwood Lab",
+    type: "website",
+  },
 };
 
 export default function Schedule() {

@@ -30,7 +30,7 @@ Status: reviewed and accepted by parent. GPT-5.6 Luna completed the partial firs
 
 Gate: parent reviews diff; build, tests, lint pass; inspect actual exported HTML and static files.
 
-Status: pending.
+Status: reviewed and accepted by parent. GPT-5.6 Luna implemented static discovery files, page metadata, identity data, and built-output checks. Parent inspected all changes and independently passed npm run build, npm test, npm run lint, and git diff --check. Browser DOM confirms valid JSON-LD and distinct canonical/Open Graph URLs.
 
 ## Phase 3 — parent acceptance and delivery
 
@@ -40,7 +40,9 @@ Status: pending.
 - Commit reviewed work on the branch; do not merge or deploy.
 - Contact Brent using `notify` on completion or if blocked on human approval.
 
-Status: pending.
+Status: complete. Parent inspected homepage and schedule screenshots at 1440px and 390px widths; both pages have scrollWidth equal to viewport width. Accessibility snapshot confirms unique repository names; #hammer resolves to its article and all three project IDs exist. No CSS changes, new dependencies, unsupported factual additions, merge, or deployment. Google Calendar booking was not submitted or tested end-to-end.
+
+Verification artifacts (temporary local files): /tmp/rl-desktop.png, /tmp/rl-mobile.png, /tmp/rl-schedule-desktop.png, /tmp/rl-schedule-mobile.png. Build-first test workflow is documented in README.md. Branch is ready for Brent's review before merge/deployment.
 
 ## Future editorial input (not blocking this implementation)
 
