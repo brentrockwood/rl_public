@@ -7,6 +7,14 @@ const scheduleUrl = "https://calendar.app.google/zrhcrUpvDfyRHhgy7";
 export const metadata = {
   title: "Schedule a conversation | Rockwood Lab",
   description: "Choose a time to talk with Rockwood Lab about a practical system, research question, or possible experiment.",
+  alternates: { canonical: "https://rockwoodlab.com/schedule/" },
+  openGraph: {
+    title: "Schedule a conversation | Rockwood Lab",
+    description: "Choose a time to talk with Rockwood Lab about a practical system, research question, or possible experiment.",
+    url: "https://rockwoodlab.com/schedule/",
+    siteName: "Rockwood Lab",
+    type: "website",
+  },
 };
 
 export default function Schedule() {
@@ -45,7 +53,7 @@ export default function Schedule() {
             <li><span>02</span><p>Who does the work today, and where does judgment matter?</p></li>
             <li><span>03</span><p>What would a useful first experiment show?</p></li>
           </ol>
-          <a className="booking-button" href={scheduleUrl} target="_blank" rel="noreferrer">
+          <a className="booking-button" href={scheduleUrl} target="_blank" rel="noreferrer" aria-label="Open available times in Google Calendar">
             Open available times <span aria-hidden="true">↗</span>
           </a>
           <p className="booking-note">Availability and confirmation are handled by Google Calendar.</p>
