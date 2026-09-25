@@ -45,7 +45,7 @@ export default function Schedule() {
             <li><span>02</span><p>Who does the work today, and where does judgment matter?</p></li>
             <li><span>03</span><p>What would a useful first experiment show?</p></li>
           </ol>
-          <a className="booking-button" href={scheduleUrl} target="_blank" rel="noreferrer">
+          <a className="booking-button" href={scheduleUrl} target="_blank" rel="noreferrer" aria-label="Open available times in Google Calendar">
             Open available times <span aria-hidden="true">↗</span>
           </a>
           <p className="booking-note">Availability and confirmation are handled by Google Calendar.</p>

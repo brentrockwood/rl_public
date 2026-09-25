@@ -30,3 +30,17 @@ for (const phrase of [
 for (const phrase of ["Kevin Lim", "Success Stories", "#process", "Privacy Policy", "Terms of Service"]) {
   assert.ok(!content.includes(phrase), `Found removed or unsupported content: ${phrase}`);
 }
+
+for (const id of ["hammer", "provenance-inspector", "acs-adapters"]) {
+  assert.match(content, new RegExp(`<article id="${id}">`), `Missing project ID: ${id}`);
+}
+
+for (const label of [
+  "Repository: Hammer on GitHub",
+  "Repository: Provenance Inspector extension on GitHub",
+  "Pi ACS adapter repository on GitHub",
+  "OpenCode ACS adapter repository on GitHub",
+  "Open available times in Google Calendar",
+]) {
+  assert.ok(content.includes(`aria-label="${label}"`), `Missing unambiguous link name: ${label}`);
+}

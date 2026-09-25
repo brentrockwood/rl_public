@@ -19,7 +19,7 @@ Do not invent project maturity, test results, supported provenance signals, meet
 
 Gate: parent reviews diff; npm test and npm run lint pass. Inspect desktop and mobile layout before final acceptance.
 
-Status: pending.
+Status: reviewed and accepted by parent. GPT-5.6 Luna completed the partial first attempt; parent inspected the diff and independently passed npm test, npm run lint, and npm run build. Short visible labels preserve card layout; explicit accessible names retain their visible wording. Final browser checks follow in Phase 3.
 
 ## Phase 2 — discovery and identity metadata
 

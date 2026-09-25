@@ -48,29 +48,29 @@ export default function Home() {
             <h2 id="research-title">Things I’ve been building.</h2>
           </div>
           <div className="projects" aria-label="Recent work">
-            <article>
+            <article id="hammer">
               <p className="number">Capability</p>
               <h3>Hammer</h3>
               <p className="project-description">What can an AI agent build from little more than the ability to read and write files? Hammer provides a controlled environment for investigating that question.</p>
               <div className="project-links">
-                <a href="https://github.com/brentrockwood/hammer" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/brentrockwood/hammer" target="_blank" rel="noreferrer" aria-label="Repository: Hammer on GitHub">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </article>
-            <article>
+            <article id="provenance-inspector">
               <p className="number">Evidence</p>
               <h3>Provenance Inspector</h3>
               <p className="project-description">A Chrome extension that checks selected text and images for verifiable provenance signals while keeping the limits of that evidence visible.</p>
               <div className="project-links">
-                <a href="https://github.com/brentrockwood/provenance-inspector-extension" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/brentrockwood/provenance-inspector-extension" target="_blank" rel="noreferrer" aria-label="Repository: Provenance Inspector extension on GitHub">Repository <span aria-hidden="true">↗</span></a>
               </div>
             </article>
-            <article>
+            <article id="acs-adapters">
               <p className="number">Control</p>
               <h3>ACS adapters</h3>
               <p className="project-description">Experimental Pi and OpenCode integrations for the <a href="https://agentcontrolstandard.org/" target="_blank" rel="noreferrer">Agent Control Standard</a>, adding observability and control over agent tool use.</p>
               <div className="project-links">
-                <a href="https://github.com/brentrockwood/pi-acs-core" target="_blank" rel="noreferrer">Pi <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/brentrockwood/opencode-acs-core" target="_blank" rel="noreferrer">OpenCode <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/brentrockwood/pi-acs-core" target="_blank" rel="noreferrer" aria-label="Pi ACS adapter repository on GitHub">Pi <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/brentrockwood/opencode-acs-core" target="_blank" rel="noreferrer" aria-label="OpenCode ACS adapter repository on GitHub">OpenCode <span aria-hidden="true">↗</span></a>
               </div>
             </article>
           </div>
