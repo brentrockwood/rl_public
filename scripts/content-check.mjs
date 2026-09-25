@@ -50,7 +50,7 @@ try {
 const [home, schedule, robots, sitemap] = output;
 
 function attribute(tag, name) {
-  return tag.match(new RegExp(`\\b${name}\\s*=\\s*["']([^"']*)["']`, "i"))?.[1];
+  return tag.match(new RegExp(`(?:^|\\s)${name}\\s*=\\s*["']([^"']*)["']`, "i"))?.[1];
 }
 
 function metaValue(html, key) {
