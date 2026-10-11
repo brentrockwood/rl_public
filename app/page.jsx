@@ -12,6 +12,7 @@ function Header() {
         <a href="#research">Research</a>
         <a href="#practice">Practice</a>
         <a href="#about">About</a>
+        <a href="/resume/">Resume</a>
         <a href="/schedule/">Schedule</a>
       </nav>
       <ThemeToggle />

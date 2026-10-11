@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import assert from "node:assert/strict";
 
 const files = ["app/layout.jsx", "app/page.jsx", "app/schedule/page.jsx"];
@@ -38,6 +38,7 @@ for (const id of ["hammer", "provenance-inspector", "acs-adapters"]) {
 const outputFiles = {
   home: "out/index.html",
   schedule: "out/schedule/index.html",
+  resume: "out/resume/index.html",
   robots: "out/robots.txt",
   sitemap: "out/sitemap.xml",
 };
@@ -47,7 +48,7 @@ try {
 } catch {
   throw new Error("Built output is missing. Run `npm run build` before `npm test`.");
 }
-const [home, schedule, robots, sitemap] = output;
+const [home, schedule, resume, robots, sitemap] = output;
 
 function attribute(tag, name) {
   return tag.match(new RegExp(`(?:^|\\s)${name}\\s*=\\s*["']([^"']*)["']`, "i"))?.[1];
@@ -78,6 +79,7 @@ function identityGraph(html) {
 
 assert.equal(canonical(home), "https://rockwoodlab.com/", "Home canonical URL is incorrect");
 assert.equal(canonical(schedule), "https://rockwoodlab.com/schedule/", "Schedule canonical URL is incorrect");
+assert.equal(canonical(resume), "https://rockwoodlab.com/resume/", "Resume canonical URL is incorrect");
 assert.equal(metaValue(home, "og:title"), "Rockwood Lab | Independent R&D", "Home Open Graph title is incorrect");
 assert.equal(metaValue(schedule, "og:title"), "Schedule a conversation | Rockwood Lab", "Schedule Open Graph title is incorrect");
 assert.equal(metaValue(schedule, "og:description"), "Choose a time to talk with Rockwood Lab about a practical system, research question, or possible experiment.", "Schedule Open Graph description is incorrect");
@@ -106,9 +108,15 @@ assert.deepEqual(person, {
 
 assert.ok(robots.includes("User-agent: *\nAllow: /"), "robots.txt must allow crawling");
 assert.ok(robots.includes("Sitemap: https://rockwoodlab.com/sitemap.xml"), "robots.txt must reference the sitemap");
-for (const url of ["https://rockwoodlab.com/", "https://rockwoodlab.com/schedule/"]) {
+for (const url of ["https://rockwoodlab.com/", "https://rockwoodlab.com/schedule/", "https://rockwoodlab.com/resume/"]) {
   assert.ok(sitemap.includes(`<loc>${url}</loc>`), `Sitemap is missing ${url}`);
 }
+const resumeDownloads = ["BrentRockwood-CV.pdf", "BrentRockwood-CV.docx", "BrentRockwood-CV.md"];
+await Promise.all(resumeDownloads.map((file) => access(`out/resume/${file}`)));
+for (const file of resumeDownloads) {
+  assert.ok(resume.includes(`href="${file}"`), `Resume output is missing ${file} download link`);
+}
+assert.ok(resume.includes('href="https://rockwoodlab.com/"'), "Resume output is missing the Rockwood Lab link");
 for (const [html, label] of [[home, "home"], [schedule, "schedule"]]) {
   for (const id of ["main"]) assert.ok(html.includes(`id="${id}"`), `${label} output is missing #${id}`);
 }
@@ -116,6 +124,7 @@ for (const id of ["hammer", "provenance-inspector", "acs-adapters"]) {
   assert.ok(home.includes(`id="${id}"`), `Built home output is missing #${id}`);
 }
 assert.ok(home.includes('href="/schedule/"'), "Built home output is missing the schedule link");
+assert.ok(home.includes('href="/resume/"'), "Built home output is missing the resume link");
 
 for (const [html, href, label] of [
   [home, "https://github.com/brentrockwood/hammer", "Repository: Hammer on GitHub"],
